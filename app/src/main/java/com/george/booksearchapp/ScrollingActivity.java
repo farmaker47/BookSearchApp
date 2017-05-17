@@ -58,6 +58,36 @@ public class ScrollingActivity extends AppCompatActivity implements LoaderCallba
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.GONE);
 
+        ////////
+        /////////
+        ////////
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        // Get details on the currently active default da
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        // If there is a network connection, fetch data
+        if (networkInfo != null && networkInfo.isConnected()) {
+            // Get a reference to the LoaderManager, in order to interact with loaders.
+            LoaderManager loaderManager = getLoaderManager();
+
+            // Initialize the loader. Pass in the int ID constant defined above and pass in null for
+            // the bundle. Pass in this activity for the LoaderCallbacks parameter (which is valid
+            // because this activity implements the LoaderCallbacks interface).
+            loaderManager.initLoader(BOOK_LOADER_ID, null, this);
+        } else {
+            // Otherwise, display error
+            // First, hide loading indicator so error message will be visible
+
+            loadingIndicator.setVisibility(View.GONE);
+
+            // Update empty state with no connection error message
+            mTextView.setText(R.string.no_internet);
+        }
+        //////
+        /////
+        /////
+
+
+
         //Setting a listener to the Search Button
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override

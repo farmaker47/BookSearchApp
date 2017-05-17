@@ -5,7 +5,7 @@
     <string name="editHint">Search for book</string>
     <string name="bookSearch">Search</string>
     <string name="no_internet">No internet connection detected</string>
-    <string name="no_books">No books found</string>
+    <string name="no_books">Use valid keywords to populate list</string>
     <string name="dummyTitleText">Title of book:\t\t</string>
     <string name="dummyDateText">Published date:\t\t</string>
     <string name="dummyAuthorText">Author(s):\t\t</string>
