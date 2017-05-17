@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BookSearch App</string>
+    <string name="title">Search your book</string>
+    <string name="action_thanks">Thanks for using</string>
+    <string name="editHint">Search for book</string>
+    <string name="bookSearch">Search</string>
+    <string name="no_internet">No internet connection detected</string>
+    <string name="no_books">No books found</string>
+    <string name="dummyTitleText">Title of book:\t\t</string>
+    <string name="dummyDateText">Published date:\t\t</string>
+    <string name="dummyAuthorText">Author(s):\t\t</string>
+</resources>
